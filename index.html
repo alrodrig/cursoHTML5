@@ -1,386 +1,155 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <title>Enjoy HTML5</title>
 
-		<title>Diseño Web con HTML5, CSS3, jQuery Nivel Básico</title>
+  <link rel="stylesheet" type="text/css" href="css/tuktuk.css">
+  <link rel="stylesheet" type="text/css" href="css/tuktuk.icons.css">
+  <link rel="stylesheet" type="text/css" href="css/tuktuk.theme.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
-		<meta name="description" content="Diseño Web con HTML5, CSS3, jQuery Nivel Básico">
-		<meta name="author" content="Carlos Rojas">
+  <style>
+  	figure {
+		margin: 1em 40px;
+		text-align: center;
+	}
+	.elemento {
+		float: right;
+		width: 70%;
+	}
+	.elemento2 {
+		float: left;
+		width: 70%;
+	}
+	.figuritas {
+		border: 0;
+		float: left;
+		width: 30%;
+	}
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </style>
+</head>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<body>
+	<header>
+		<nav>
+			<a href="/html">HTML</a> |
+			<a href="/css">CSS</a> |
+			<a href="/js">JavaScript</a> |
+			<a href="/jquery">jQuery</a>
+		</nav>
+	</header>
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+	<figure>
+    	<img src="logo-GRF.png" alt="The Garfield Show" width="800" height="200" >
+    </figure>
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+ 	<article>
+  		<p>Garfield es el nombre de la historieta creada por Jim Davis, que tiene como protagonistas al gato Garfield, al no muy brillante perro Odie, y a su dueño, el inepto Jon Arbuckle (Jon Bonachón en el doblaje latinoamericano). El protagonista se llama así por el abuelo de Davis, James Garfield Davis, que fue bautizado en honor al presidente estadounidense James A. Garfield.</p>
+ 	</article>
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+	<figure>
+    	<img src="poster.jpg" alt="The Garfield Show" width="800" height="228" class="responsive rounded margin-bottom">
+    </figure>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+	<section>
+  		<h1>HISTORIA</h1>
 
-	<body>
+		<figure>
+	    	<img src="imita.gif" alt="Historia" width="800" height="200">
+	    </figure>
+	
+	   	<article>
+	  		<p>"Como toda buena lasagna, Garfield es un gato que nació en la cocina de un restaurante italiano una noche de invierno de 1978, mientras afuera la nieve caía cual queso parmesano. El dueño del restaurante, ante la obligación de elegir entre Garfield y cerrar las puertas de su negocio por falta de pasta para cocinar, vendió el gato a una tienda de animales. Garfield pensó que ya estaba condenado a ser un vagabundo el resto de su vida, pero un buen día Jon se cruzó en su camino." </p>
 
-		<div class="reveal">
+			<p>Garfield, también llamado en la serie el Garfo, debutó el 19 de junio de 1978, considerado como el cumpleaños de Garfield (las caricaturas del 19 de junio siempre muestran a Garfield celebrando su cumpleaños). La historieta se burla de dueños de mascotas y de su relación con los animales domésticos, retratando a la mascota como el verdadero amo de la casa. Garfield también apela a su manera a problemas muy humanos, como las dietas, el odio a los lunes, la apatía, el fastidio, en contadas ocasiones se le atribuyo enemistar a los perros y gatos, el maltrato permanente a los ancianos, etc.</p>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Diseño Web con HTML5</h1>
-					<h6>carlosrojaso.github.io/cursoHTML5</h3>
-					<p>
-						<small>Dirigido por: <a href="http://www.carlosrojasblog.com">Carlos Rojas</a> / <a href="http://twitter.com/carlosrojas_o">@carlosrojas_o</a></small>
-					</p>
-				</section>
+			<p>A través del desarrollo de la caricatura, la conducta de Garfield se vuelve más humana y menos gatuna. Su apariencia física también ha evolucionado, pues en sus inicios era un gran gato gordo de mandíbulas flojas y pequeños ojos redondos. Rápidamente empequeñeció, sus ojos se agrandaron y se volvió mucho más sonriente. Hacia 1983 su apariencia familiar (con ojos ovalados) había tomado forma. También empezó a caminar a dos patas, y el estilo de las caricaturas cambió de focalizarse en las debilidades de los gatos a dar énfasis a las situaciones cómicas (como la forma que Garfield se burla constantemente de la mala suerte de Jon con las mujeres).</p>
 
-				<!-- Video introductorio -->
-				<section>
-						<iframe width="560" height="315" src="http://www.youtube.com/embed/J0rKyOZX__k" frameborder="0" allowfullscreen></iframe>					
-				</section>
-
-				<section>
-					<section>
-						<h2>< whoami ></h2>
-						
-						<a href="#" class="image navigate-down">
-							<img src="images/carlosrojas.jpg" />
-						</a>
-					</section>
-					<section>
-						<h2>Desarrollador WEB</h2>
-						<p><i>desde 2004...</i></p>
-						<ul>
-						<li>PHP</li>
-						<li>Javascript</li>
-						<li>Enfocado en Moviles</li>
-						<li>algo de Python</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Desarrollador Móvil</h2>
-						<p><i>desde 2006...</i></p>
-						<ul>
-						<li>WAP</li>
-						<li>WML</li>
-						<li>XHTML</li>
-						<li>Phonegap</li>
-						<li>Java</li>
-						<li>Objetive-C</li>
-						</ul>
-					</section>
-				</section>
+			<p>Las tiras cómicas de los periódicos de los lunes a sábados aparecieron totalmente en color desde el 7 de junio de 1999.
+			La tira cómica se convirtió en un especial de dibujos animados para la televisión en 1982, llamado Aquí viene Garfield. Se hicieron doce especiales para la televisión así como una serie de televisión, Garfield y sus amigos, que se emitió entre 1988 y 1995. En los últimos años, además, se han realizado dos adaptaciones al cine de las aventuras de Garfield: Garfield: La película (2004) y Garfield 2 (2006).</p>
+ 		</article>
+ 	</section>
 
 
-				<section>
-					<section>
-						<h2>Agenda</h2>
-						
-						<a href="#" class="image navigate-down">
-							<img src="images/schedule.png" />
-						</a>
-					</section>
-					<section>
-						<h2>1. Introducción</h2>
-						<ul>
-						<li>Historia</li>
-						<li>Importancia</li>
-						<li>Nuevas APIS</li>
-						</ul>
-					</section>
-					<section>
-						<h2>2. Hagamos una pagina con HTML5</h2>
-						<ul>
-						<li>Normalize,Modernizr, freepix</li>
-						<li>Etiquetas</li>
-						<li>Textos</li>
-						<li>Media</li>
-						</ul>
-					</section>
-					<section>
-						<h2>3. Un diseño, todas las pantallas </h2>
-						<ul>
-						<li>¿Que es el diseño responsivo?</li>
-						<li>Bootstrap, Foundation y Edge Flow</li>
-						<li>May the "code" be with you</li>
-						<li>Testing</li>
-						</ul>
-					</section>
-					<section>
-						<h2>4. JQuery </h2>
-						<ul>
-						<li>Algunos conceptos.</li>
-						<li>Algunos metodos importantes.</li>
-						<li>JQuery UI.</li>
-						<li>JQuery Mobile.</li>
-						<li>Finalizando nuestro Landing.</li>
-						</ul>
-					</section>
-				</section>
+	<section>
+  		<h1>PERSONAJES</h1>
 
-				<section>
-					<section>	
-						<img src="images/intro.png" style="border:0" />
-					</section>
-					<section>
-						<h2>Historia</h2>
-						<ul>
-						<li>5ta revision del lenguaje.</li>
-						<li>Todavia experimental.</li>
-						<li>header,footer,section,article,time,video ...</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Importancia</h2>
-						<ul>
-						<li>Canvas 2D y 3D, audio, vídeo</li>
-						<li>Etiquetas para manejar grandes conjuntos de datos.</li>
-						<li>Mejoras en los formularios.</li>
-						<li>Visores: MathML </li>
-						<li>Drag &amp; Drop</li>
-						<li>WEB semantica</li>
-						</ul>
-					</section>
-					<section>
-						<h2>APIS </h2>
-						<ul>
-						<li>API para hacer Drag &amp; Drop. Mediante eventos.</li>
-						<li>API para trabajar Off-Line.</li>
-						<li>API de Geoposicionamiento para dispositivos que lo soporten.</li>
-						<li>API Storage. </li>
-						<li>WebSockets.</li>
-						<li>WebWorkers.</li>
-						</ul>
-					</section>
-					
-				</section>
+	   	<article>
+	  		<div class="elemento">
+	  			<p> <b>Garfield</b> es un gato gordo anaranjado, con rayas negras y una peculiar forma de actuar (se cree que es un gato persa). Le encanta comer, dormir (en cantidades asombrosas), ver la televisión y burlarse de Jon y Odie. Su comida favorita es la lasaña, y detesta las pasas, las anchoas y las espinacas. Se le ha visto cazar pájaros, pero no ratones, pues considera asqueroso comerlos. También odia a las arañas y, sobre todo, los lunes (no aplicable cuando es su cumpleaños).</p>
+			</div>
+			<div class="figuritas">
+				<figure> 
+					<img src="garfield.jpg" alt="Garfield">
+    			</figure>
+    		</div>
 
-				<section>
-					<section>
-						<h2>May the code be wit you...</h2>
-						
-						<a href="#" class="image navigate-down">
-							<img src="images/yoda.png" />
-						</a>
-					</section>
-					<section>
-						<h2>audio</h2>
-						<script src="https://gist.github.com/carlosrojaso/6f94ecf86e2aa6088bc5.js"></script>
-					</section>
-					<section>
-						<h2>Modernizr</h2>
-						<script src="https://gist.github.com/carlosrojaso/b6757d11bd3c201dc6d1.js"></script>
-					
-				</section>
-				<section>
-						<h2>Section</h2>
-						<script src="https://gist.github.com/carlosrojaso/442ae464769e60bdc2dc.js"></script>
-					
-				</section>
-				<section>
-						<h2>Article</h2>
-						<script src="https://gist.github.com/carlosrojaso/5133e2b00a7ca3cf1c85.js"></script>
-					    
-				</section>
-				<section>
-						<h2>Nav</h2>
-						<script src="https://gist.github.com/carlosrojaso/07332d7a315ec301cc04.js"></script>
-				</section>
-				<section>
-						<h2>Header</h2>
-						<script src="https://gist.github.com/carlosrojaso/3e0c8ee0debe3ed7197f.js"></script>
-				</section>
-				<section>
-						<h2>Footer</h2>
-						<script src="https://gist.github.com/carlosrojaso/56bf6fd1b7cc9bb743bf.js"></script>
-				</section>
-				<section>
-						<h2>Figure</h2>
-						<script src="https://gist.github.com/carlosrojaso/25074bded8cc20279de9.js"></script>
-				</section>
-				<section>
-						<h2>Datalist</h2>
-						<script src="https://gist.github.com/carlosrojaso/e0bcbe507ec3fbe1d53a.js"></script>
-				</section>
-				</section>
+			<div class="elemento">
+				<p> <b>Jonathan 'Jon' Q. Arbuckle (Jon Bonachon, en Latinoamérica)</b> es el dueño de Garfield y de Odie. Es una persona extremadamente torpe y desafortunada, especialmente en su vida amorosa. Fue el primer compañero de conversación de Garfield y a menudo blanco de sus bromas. Es caricaturista, y está obligado a gastar mucho dinero para satisfacer las necesidades de Garfield, incluyendo cantidades industriales de comida y reparar los destrozos que provoca en su casa.</p>
+			</div>
+			<div class="figuritas">			
+				<figure>
+			    	<img src="john.jpg" alt="John">
+    			</figure>			
+    		</div>
 
-				<!-- CSS3 -->
-				<section>
-					<section>	
-						<img src="images/css3.png" style="border:0" />
-					</section>
-					<section>
-						<h2>CSS1</h2>
-						<ul>
-						<li>Propiedades de las Fuente</a>, como tipo, tamaño, énfasis...</li>
-						<li>Color de texto, fondos, bordes u otros elementos.</li>
-						<li>Atributos del texto, como espaciado entre palabras, letras, líneas, etcétera.</li>
-						<li>Alineación de textos, imágenes, tablas u otros.</li>
-						<li>Propiedades de caja, como margen, borde, relleno o espaciado.</li>
-						<li>Propiedades de identificación y presentación de listas.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>CSS2</h2>
-						<ul>
-						<li>Las funcionalidades propias de las capas (<tt>&lt;div&gt;</tt>) como de posicionamiento relativo/absoluto/fijo, niveles (<tt>z-index</tt>), etcétera.</li>
-						<li>El concepto de "<i>media types</i>",</li>
-						<li>Soporte para las hojas de estilo auditivas</li>
-						<li>Texto bidireccional, sombras, etcétera.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>CSS3</h2>
-						<p align="left">
-						A diferencia de CSS2, que fue una gran especificación que definía varias funcionalidades, CSS3 está dividida en varios documentos separados, llamados "módulos". <br/><br/>
+			<div class="elemento">
+				<p> <b>Odie</b> es un adorable pero tonto perro de pelaje amarillo y orejas castañas, que constantemente jadea mostrando su gran lengua. Es el único personaje sin una "voz" (aunque en una ocasión se le mostró pensando: "tengo hambre". También se le ha visto hablar en algunos sueños de Garfield y diciendo ¨el olfato no falla¨). Es el blanco común de las bromas de Garfield, siendo la más clásica el tirarlo de un puntapié de la mesa. El dueño original de Odie era Lyman, un amigo y compañero de hogar de Jon Arbuckle. Sin embargo, cuando Lyman desapareció en 1983, Odie se convirtió en mascota de Jon. Es, comparado con Garfield, un idiota que lo babea todo. Recientemente, Odie parece estar caminando mucho más a menudo a dos patas. Su primera aparición fue el 8 de agosto de 1978.</p>
+			</div>
+			
+			<div class="figuritas">
+				<figure>
+			    	<img src="oddie.jpg" alt="Oddie">
+    			</figure>
+    		</div>
 
-						Cada módulo añade nuevas funcionalidades a las definidas en CSS2, de manera que se preservan las anteriores para mantener la compatibilidad.
-						</p>
-					</section>
-					</section>
-				<section>
-					<section>
-						<h2>Pages with Style...</h2>
-						
-						<a href="#" class="image navigate-down">
-							<img src="images/gangnamstyle.png" />
-						</a>
-					</section>
-					<section>
-						<h2>CSS3 The border-radius</h2>
-						<script src="https://gist.github.com/carlosrojaso/84a002c0667ae2f2a9de.js"></script>
-					</section>
-					<section>
-						<h2>CSS3 The box-shadow</h2>
-						<script src="https://gist.github.com/carlosrojaso/5cd3aac92c946031772d.js"></script>
-					
-				</section>
-				<section>
-						<h2>CSS3 The border-image</h2>
-						<script src="https://gist.github.com/carlosrojaso/5539d51b913398215ed6.js"></script>
-					
-				</section>
-				<section>
-						<h2>CSS3 The background-size</h2>
-						<script src="https://gist.github.com/carlosrojaso/7a48f614b22c4f5bedba.js"></script>
-				</section>
-				<section>
-						<h2>CSS3 The background-origin</h2>
-						<script src="https://gist.github.com/carlosrojaso/0d700ea0aed25ebb4d97.js"></script>
-				</section>
-				<section>
-						<h2>CSS3 Multiple Background Images</h2>
-						<script src="https://gist.github.com/carlosrojaso/9a4da583f2a0380aba83.js"></script>
-				</section>
-				<section>
-						<h2>CSS3 Linear Gradients</h2>
-						<script src="https://gist.github.com/carlosrojaso/eb197de8c25d49c630b7.js"></script>
-				</section>
-				<section>
-						<h2>CSS3 Text Shadow</h2>
-						<script src="https://gist.github.com/carlosrojaso/205ab1c3def5f9602f1e.js"></script>
-				</section>
-				<section>
-						<h2>CSS3 Web Fonts</h2>
-						<script src="https://gist.github.com/carlosrojaso/4d8adb2366844856918f.js"></script>
-				</section>
+			<div class="elemento">
+				<p> <b>Dra. Liz Wilson</b> es la veterinaria de Garfield y el eterno amor de Jon Arbuckle. Ella acepta sus invitaciones a salir de vez en cuando, pero estas citas casi siempre se vuelven desastres, por sus chistes o estupideces (además de la omnipresencia de Garfield, que siempre se las arregla para estar presente en las citas). Últimamente aparece mucho como pareja estable de Jon, ya que es la única a la cual Garfield acepta.</p>
+			</div>
+			<div class="figuritas">			
+				<figure>
+			    	<img src="liz.jpg" alt="Liz">
+    			</figure>			
+    		</div>			
 
-				<section>
-						<h2>CSS3 2D Transforms</h2>
-						<script src="https://gist.github.com/carlosrojaso/900053b5885ae0f7b029.js"></script>
-				</section>
+			<div class="elemento">
+				<p> <b>Arlene</b> es la novia (aunque no siempre) de Garfield. Es una gata rosa muy delgada, que parece ser la única cosa viviente en el mundo que puede hace reír con éxito a Garfield. Tiene grandes labios y un cuello muy delgado que la distingue. Antes en la serie también tenía un hueco entre sus dientes (que fue la primera observación que le hizo Garfield al conocerla); y aparecía mucho más que ahora.</p>
+			</div>
+			<div class="figuritas">			
+				<figure>
+			    	<img src="arlene.jpg" alt="Arlene">
+    			</figure>			
+    		</div>
 
-				<section>
-						<h2>CSS3 3D Transforms</h2>
-						<script src="https://gist.github.com/carlosrojaso/939e8ab06f33b4ffc00a.js"></script>
-				</section>
+			<div class="elemento">
+				<p> <b>Pooky</b> es el osito de peluche de Garfield. Su primera aparición fue el 23 de octubre de 1978. La tira cómica mostraba a Garfield investigando a través de uno de los cajones de Jon, encontrando a Pooky, y adoptándolo como propio. Junto a él vive constantes aventuras imaginarias.</p>
+			</div>
+			<div class="figuritas">			
+				<figure>
+			    	<img src="pooky.jpg" alt="Pooky">
+    			</figure>			
+    		</div>			
 
-				<section>
-						<h2>CSS3 Transitions</h2>
-						<script src="https://gist.github.com/carlosrojaso/2fb356bfd72927469995.js"></script>
-				</section>
+			<div class="elemento">
+				<p> <b>Nermal</b> es un lindo y mono gatito (el gatito más tierno en el mundo, como se autodefine) que incomoda inmensamente a Garfield, lo que resulta normalmente el envío de Nermal a Abu Dabi. A menudo entra sin ser anunciado, para mortificación de Garfield. En sus primeras apariciones, era de los padres de Jon, pero esa explicación se dejó de usar rápidamente. Cuando se lo ve, normalmente es porque Jon tiene que hacer de niñera con él. Nunca se lo ha visto en la granja de los padres de Jon. Debido a sus largas pestañas y a su personalidad aparentemente afeminada, los fans lo han confundido a menudo como una hembra, y en el doblaje chileno se le conoce como tal (con el nombre de Telma). Como curiosidad en una de las historietas Nermal le comenta a Garfield que él nunca crecerá, porque es un gato enano, a lo que Garfield responde "hay gatos que nacen con suerte". Sin embargo, en otra historieta Garfield descubre que el secreto de la eterna juventud de Nermal radica en el hecho en que todas las noches se aplica mascarillas.</p>
+			</div>
+			<div class="figuritas">
+				<figure>
+		    		<img src="nermal.jpg" alt="Nermal">
+    			</figure>
+    		</div>
 
-				<section>
-						<h2>CSS3 Animations</h2>
-						<script src="https://gist.github.com/carlosrojaso/74319e392b02ebd5566e.js"></script>
-				</section>
+		</article>
+ 	</section>
 
-				<section>
-						<h2>CSS3 Multiple Columns</h2>
-						<script src="https://gist.github.com/carlosrojaso/b0e63edf738b350634e9.js"></script>
-				</section>
 
-				</section>
-				
-				<!-- javascript -->
-				<section>
-				    <section>	
-						<img src="images/javascript.png" style="border:0" />
-					</section>
-					<section>
-						<h2>Caracteristicas</h2>
-						<ul>
-						<li>Tipado dinámico</li>
-						<li>Objetual</li>
-						<li>Evaluación en tiempo de ejecución</li>
-						<li>Funciones de primera clase</li>
-						<li>Prototípico</li>
-						</ul>
-					</section>				
-				</section>
 
-		</div>			
-</div>
-				
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+ <!-- Aca coloco todo mi js -->
+  	<script src="js/modernizr-latest.js"></script>
+ 	<script src="js/prefixfree-min.js"></script>
+ 	<script src="js/tuktuk.js"></script>
+</body>
 </html>
