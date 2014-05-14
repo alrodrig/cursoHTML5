@@ -5,10 +5,7 @@
   <meta charset="utf-8">
   <title>Enjoy HTML5</title>
 
-  <link rel="stylesheet" type="text/css" href="css/tuktuk.css">
-  <link rel="stylesheet" type="text/css" href="css/tuktuk.icons.css">
-  <link rel="stylesheet" type="text/css" href="css/tuktuk.theme.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
   <style>
   	figure {
@@ -31,43 +28,66 @@
 	}
 	.newspaper
 	{
-	-webkit-column-count:2; /* Chrome, Safari, Opera */
-	-moz-column-count:2; /* Firefox */
-	column-count:2;
+		-webkit-column-count:2; /* Chrome, Safari, Opera */
+		-moz-column-count:2; /* Firefox */
+		column-count:2;
+		margin: 5px;
 	}
-
+	.titulog
+	{
+		margin-bottom: 20px;
+		font-size: 50px;
+		font-weight: 200;
+		line-height: 1.4
+	}
   </style>
 </head>
 
 <body>
 	<header>
-		<nav>
-			<a href="/html">HTML</a> |
-			<a href="/css">CSS</a> |
-			<a href="/js">JavaScript</a> |
-			<a href="/jquery">jQuery</a>
-		</nav>
+    	<div class="navbar navbar-inverse">
+            <ul class="nav navbar-nav">
+				<li class="active">
+                    <a href="/html">HTML</a> |
+                 </li>
+                <li>
+                	<a href="/css">CSS</a> |
+                </li>
+                <li>
+                	<a href="/js">JavaScript</a> |
+                </li>
+                <li>
+                	<a href="/jquery">jQuery</a>
+                </li>
+            </ul>
+		</div>
 	</header>
 
-	<figure>
-    	<img src="logo-GRF.png" alt="The Garfield Show" width="800" height="200" class="responsive margin-bottom">
-    </figure>
-
- 	<article>
-  		<p>Garfield es el nombre de la historieta creada por Jim Davis, que tiene como protagonistas al gato Garfield, al no muy brillante perro Odie, y a su dueño, el inepto Jon Arbuckle (Jon Bonachón en el doblaje latinoamericano). El protagonista se llama así por el abuelo de Davis, James Garfield Davis, que fue bautizado en honor al presidente estadounidense James A. Garfield.</p>
- 	</article>
+	<div class="starter-template">
+		<figure>
+	    	<img src="logo-GRF.png" alt="The Garfield Show" width="800" height="200">
+	    </figure>
+	</div>
+    
+ 	<div class="lead" align="center">
+    	<article>
+			<p>Garfield es el nombre de la historieta creada por Jim Davis, que tiene como protagonistas al gato Garfield, al no muy brillante perro Odie, y a su dueño, el inepto Jon Arbuckle (Jon Bonachón en el doblaje latinoamericano). El protagonista se llama así por el abuelo de Davis, James Garfield Davis, que fue bautizado en honor al presidente estadounidense James A. Garfield.</p>
+ 		</article>
+    </div>
 
 	<figure>
     	<img src="poster.jpg" alt="The Garfield Show" width="800" height="228" class="responsive rounded margin-bottom">
     </figure>
 
 	<section>
-  		<h1>HISTORIA</h1>
-
-		<figure>
-	    	<img src="imita.gif" alt="Historia" width="800" height="200" class="responsive margin-bottom">
-	    </figure>
-	
+    	<div class="starter-template" align="center">
+            <h1 class="titulog">HISTORIA</h1>
+             
+            <figure>
+                <img src="imita.gif" alt="Historia" width="800" height="200" class="responsive margin-bottom">
+            </figure>
+		</div>
+        
 	   	<article>
 	  		<div class="newspaper">
 	  			<p>"Como toda buena lasagna, Garfield es un gato que nació en la cocina de un restaurante italiano una noche de invierno de 1978, mientras afuera la nieve caía cual queso parmesano. El dueño del restaurante, ante la obligación de elegir entre Garfield y cerrar las puertas de su negocio por falta de pasta para cocinar, vendió el gato a una tienda de animales. Garfield pensó que ya estaba condenado a ser un vagabundo el resto de su vida, pero un buen día Jon se cruzó en su camino." </p>
@@ -84,7 +104,9 @@
 
 
 	<section>
-  		<h1>PERSONAJES</h1>
+    	<div class="starter-template" align="center">
+             <h1 class="titulog">PERSONAJES</h1>
+		</div>
 
 	   	<article>
 	  		<div class="elemento">
@@ -156,8 +178,7 @@
 
 
  <!-- Aca coloco todo mi js -->
-  	<!--<script src="js/modernizr-latest.js"></script> -->
- 	<!--<script src="js/prefixfree-min.js"></script> -->
- 	<script src="js/tuktuk.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
