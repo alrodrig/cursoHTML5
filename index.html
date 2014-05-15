@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Enjoy HTML5</title>
+  <title>GARFIELD</title>
 
-  <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!--<link href="css/combinedCSS.css" rel="stylesheet">  -->
+  <meta name="description" content="Demo of Scrolld.js">
 
   <style>
   	figure {
@@ -45,54 +47,46 @@
 
 <body>
 	<header>
-    	<div class="row">
-          <div class="large-3 medium-3 small-3 columns">
-            <div class="callout panel">
-            	<p> <a href="/html">HTML</a> | </p>
-			</div>
-          </div>
-          <div class="large-3 medium-3 small-3 columns">            
-            <div class="callout panel">
-                <p> <a href="/css">CSS</a> |  </p>
-            </div>
-          </div>
-          <div class="large-3 medium-3 small-3 columns">            
-            <div class="callout panel">
-                <p> <a href="/js">JavaScript</a> | </p>
-			</div>
-          </div>
-          <div class="large-3 medium-3 small-3 columns">          
-            <div class="callout panel">
-                 <p> <a href="/jquery">jQuery</a> </p>
-			</div>
-          </div>
+    	<div id="fixedNavBar" class="navbar navbar-inverse navbar-fixed-top">
+            <ul class="nav navbar-nav">
+				<li class="active">
+                    <a id='garfieldBtn' href="#garfield">Garfield</a> |
+                 </li>
+                <li>
+                	<a id='historiaBtn' href="#historia" >Historia</a> |
+                </li>
+                <li>
+                	<a id='personajesBtn' href="#personajes">Personajes</a> |
+                </li>
+                <li>
+                	<a href="http://www.thegarfieldshow.com" target="_blank">Garfield Show</a>
+                </li>
+            </ul>
 		</div>
 	</header>
 
-	<div>
+	<div id="garfield" class="starter-template" style="margin-top: 80px;">
 		<figure>
-	    	<img src="logo-GRF.png" alt="The Garfield Show" width="800" height="200">
+	    	<img src="logo-GRF.png" alt="The Garfield Show" width="800" height="200" class="responsive">
 	    </figure>
 	</div>
     
-    <div class="row">
-    	<div class="large-12 columns">
-            <div class="callout panel">
-        		<p><strong>Garfield </strong> es el nombre de la historieta creada por Jim Davis, que tiene como protagonistas al gato Garfield, al no muy brillante perro Odie, y a su dueño, el inepto Jon Arbuckle (Jon Bonachón en el doblaje latinoamericano). El protagonista se llama así por el abuelo de Davis, James Garfield Davis, que fue bautizado en honor al presidente estadounidense James A. Garfield.</p>
-            </div>
-         </div>
+ 	<div class="lead" align="center">
+    	<article>
+			<p>Garfield es el nombre de la historieta creada por Jim Davis, que tiene como protagonistas al gato Garfield, al no muy brillante perro Odie, y a su dueño, el inepto Jon Arbuckle (Jon Bonachón en el doblaje latinoamericano). El protagonista se llama así por el abuelo de Davis, James Garfield Davis, que fue bautizado en honor al presidente estadounidense James A. Garfield.</p>
+ 		</article>
     </div>
-        
+
 	<figure>
-    	<img src="poster.jpg" alt="The Garfield Show" width="800" height="228" >
+    	<img src="poster.jpg" alt="The Garfield Show" width="800" height="228" class="responsive rounded margin-bottom">
     </figure>
 
 	<section>
-    	<div align="center">
+    	<div id="historia" class="starter-template" align="center">
             <h1 class="titulog">HISTORIA</h1>
              
             <figure>
-                <img src="imita.gif" alt="Historia" width="800" height="200" >
+                <img src="imita.gif" alt="Historia" width="800" height="200" class="responsive margin-bottom">
             </figure>
 		</div>
         
@@ -112,7 +106,7 @@
 
 
 	<section>
-    	<div align="center">
+    	<div id="personajes" class="starter-template" align="center">
              <h1 class="titulog">PERSONAJES</h1>
 		</div>
 
@@ -186,10 +180,15 @@
 
 
  <!-- Aca coloco todo mi js -->
-    <script src="js/vendor/jquery.js"></script>
-	<script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!--<script type="text/javascript" src="js/scrolld.js"></script>-->
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+			$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+	</script>
+	<script src="js/scrolld.min.js"></script>
+
 </body>
 </html>
