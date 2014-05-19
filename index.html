@@ -204,15 +204,28 @@
             <label class="checkbox">
               	<input type="checkbox" value="remember-me"> Recordar datos
             </label>
-            <button id="enviar" type="submit" class="btn btn-lg btn-primary btn-block">Enviar</button>            
-
-            <div id="mensaje">
-            </div>
+            <button id="enviar" name="enviar" type="submit" class="btn btn-lg btn-primary btn-block">Enviar</button>            
+            <button id="mostrar" name="mostrar" type="submit" class="btn btn-lg btn-primary btn-block">Mostrar</button>                        
 
           </form>
         </div> <!-- /container -->
 	</div>
     
+    <div class="container">
+        <hr>
+            <footer>
+                <p>Garfield Show</p>
+            </footer>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="mensaje" style="width:300px;height:300px; padding:50px">
+              La información fué enviada. Gracias!!   
+            </div>
+          </div>
+    </div>
+
 <!-- Aca coloco todo mi js -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
@@ -224,37 +237,38 @@
 
        
 	<script type="text/javascript">
-		$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+        $('#comentarios').submit(function()
+                {
+                //showMensaje();
+                // Check browser support
+                if (typeof(Storage) != "undefined")
+                  {
+                  //var objetoJSON = '{"nombre":"' + $('#nombre_p').val() + '","email":"' + $('#email_p').val() + '","comentarios":"' + $('#comentarios_p').val() + '"}';
+                  var objetoJSON = {"nombre":$("#nombre_p").val(),"email":$("#email_p").val(),"comentarios":$("#comentarios_p").val()};
 
-		// Event setup using a convenience method
-		$( "#formulario" ).submit(function() {
-			
-			var elemento = $("#nombre_p").val(); 
-			alert("Sus comentarios fueron enviados. Gracias!"+elemento);
-			// showMensaje();
-			
-			// Store
-
-			localStorage.nombre_p = $("#nombre_p").val();
-			localStorage.email_p = $("#email_p").val();
-			localStorage.comentarios_p = $("#comentarios_p").val();		
-			
-			// Store
-			//localStorage.setItem("lastname", "Smith");
-			// Retrieve
-			//document.getElementById("result").innerHTML=localStorage.getItem("lastname");		
-			// Store
-			//localStorage.lastname = "Smith";
-			// Retrieve
-			//document.getElementById("result").innerHTML=localStorage.lastname;	
-		});
-		
-		function showMensaje(){
-			alert("Sus comentarios fueron enviados. Gracias!"+elemento);
-			//$("#mensaje").append('<div class="alert alert-success">Su comentario fue enviado</div>');
-			return;		
-		}
-	</script>
+                  localStorage.setItem("usuario",JSON.stringify(objetoJSON));
+                  showMensaje();
+                  }
+                else
+                  {
+                  alert("Problemas en el almacenamiento.");
+                  }
+                }); 
+        $('#mostrar').click(function()
+                {
+                    var user = JSON.parse(localStorage.getItem('usuario'));
+                    var htmlmsj= '<b>Nombre:</b><br/>' + user.nombre + '<br/><b>Email:</b><br/>' + user.email + '<br/><b>Comentarios:</b><br/> ' + user.comentarios + '<br/>';
+                    $('#mensaje').html(htmlmsj);
+                    $('#myModal').modal('show');
+                    });
+                    
+        $("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+        
+        function showMensaje(){
+            alert("Su informacion fue enviada.\nNombre: " + $('#nombre_p').val() + "\nEmail: " + $('#email_p').val() + "\nComentarios: " + $('#comentarios_p').val());
+            }
+            
+    </script>
 
 	<!--<script>
     	$(function () { 
